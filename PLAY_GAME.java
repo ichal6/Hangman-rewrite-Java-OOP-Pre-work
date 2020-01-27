@@ -35,13 +35,13 @@ public class PLAY_GAME
         ArrayList<String> draws = new ArrayList<String>();
         draws = drawToArray();
         
-        Scanner dataFromFile = FILE_OPERATION.open_file("countries_and_capitals.txt");
+        Scanner dataFromFile = FILE_OPERATION.openFile("countries_and_capitals.txt");
         listCountrysAndCapitals = FILE_OPERATION.ScannertoArray(dataFromFile, false);
         countryAndCapital = PREPARE_TO_GAME.randomCapitalsAndCountry(listCountrysAndCapitals);
         capital = countryAndCapital.get(INDEX_OF_CAPITAL);
         char[] capitalDash = PREPARE_TO_GAME.makeDashWord(capital);
 
-        Scanner dataFromListWin = FILE_OPERATION.open_file("win_list.txt");
+        Scanner dataFromListWin = FILE_OPERATION.openFile("win_list.txt");
         listWin = FILE_OPERATION.ScannertoArray(dataFromListWin, true);
 
         startGame(countryAndCapital, capitalDash, listWin, draws);
@@ -234,7 +234,7 @@ public class PLAY_GAME
 
     public static ArrayList<String> drawToArray()
     {
-        Scanner drawFile = FILE_OPERATION.open_file("draws.txt");
+        Scanner drawFile = FILE_OPERATION.openFile("draws.txt");
         ArrayList<String> draws = new ArrayList<String>();
         draws = FILE_OPERATION.draw(drawFile);
         return draws;
@@ -281,7 +281,7 @@ public class PLAY_GAME
     public static void displayHighscores()
     {
         clearScreen();
-        Scanner dataFromListWin = FILE_OPERATION.open_file("win_list.txt");  
+        Scanner dataFromListWin = FILE_OPERATION.openFile("win_list.txt");  
         System.out.print(FILE_OPERATION.arrayToString(FILE_OPERATION.ScannertoArray(dataFromListWin, true)));
     }
 

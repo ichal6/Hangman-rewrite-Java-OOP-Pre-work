@@ -11,7 +11,7 @@ public class FILE_OPERATION
         
     }
 
-    public static Scanner open_file(String filename)
+    public static Scanner openFile(String filename)
     {
         Scanner data = null;
 

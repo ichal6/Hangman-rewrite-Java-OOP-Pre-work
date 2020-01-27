@@ -23,7 +23,7 @@ public class Main
                     PLAY_GAME.initGame();
                     break;
                 case 'H':
-                    Scanner dataFromListWin = FILE_OPERATION.open_file("win_list.txt");  
+                    Scanner dataFromListWin = FILE_OPERATION.openFile("win_list.txt");  
                     System.out.print(FILE_OPERATION.arrayToString(FILE_OPERATION.ScannertoArray(dataFromListWin, true)));
                     break;
                 case 'E':
