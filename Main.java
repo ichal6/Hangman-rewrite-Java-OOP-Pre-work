@@ -15,9 +15,9 @@ public class Main
         while (isRun)
         {
             System.out.println("(S)tart\n(H)igh scores\n(E)xit");
-            char choose_user = inputUser.next().charAt(0);  // Read user input
-            choose_user = Character.toUpperCase(choose_user);
-            switch(choose_user)
+            char chooseUser = inputUser.next().charAt(0);  // Read user input
+            chooseUser = Character.toUpperCase(chooseUser);
+            switch(chooseUser)
             {
                 case 'S':
                     PLAY_GAME.initGame();
