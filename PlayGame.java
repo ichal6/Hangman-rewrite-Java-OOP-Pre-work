@@ -118,7 +118,7 @@ public class PlayGame
 
         if (letterOrWord.length() > 2)
         {
-            foundWord = FIND_LETTER.checkWordInText(capital, letterOrWord);
+            foundWord = FindLetter.checkWordInText(capital, letterOrWord);
             foundLetter = true;
             if (!foundWord)
             {
@@ -134,8 +134,8 @@ public class PlayGame
         }
         else
         {
-            foundLetter = FIND_LETTER.checkLetterInText(capital, letterOrWord);
-            dashedWord = FIND_LETTER.checkLetterInText(capital, dashedWord, letterOrWord);
+            foundLetter = FindLetter.checkLetterInText(capital, letterOrWord);
+            dashedWord = FindLetter.checkLetterInText(capital, dashedWord, letterOrWord);
             foundWord = hasWord(dashedWord);
 
             clearScreen();

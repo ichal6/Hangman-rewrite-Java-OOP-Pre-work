@@ -1,4 +1,4 @@
-public class FIND_LETTER 
+public class FindLetter 
 {
     public static void main(String[] args) 
     {
