@@ -80,7 +80,7 @@ public class PLAY_GAME
         boolean isRun = true;
         while (isRun)
         {
-            gameWin = play_game(countryAndCapital, capitalDash, draws);
+            gameWin = playGame(countryAndCapital, capitalDash, draws);
             if (gameWin)
             {
                 winGame(countryAndCapital, listWin);
@@ -100,7 +100,7 @@ public class PLAY_GAME
         
     }
 
-    public static boolean play_game(ArrayList<String> countryAndCapital, char[] dashedWord, ArrayList<String> draws)
+    public static boolean playGame(ArrayList<String> countryAndCapital, char[] dashedWord, ArrayList<String> draws)
     {
         boolean foundLetter = false;
         boolean foundWord = false;
