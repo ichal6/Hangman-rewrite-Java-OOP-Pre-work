@@ -114,6 +114,8 @@ public class PLAY_GAME
 
         letterOrWord = insertLetterOrWord();
 
+        guessingCount += 1;
+
         if (letterOrWord.length() > 2)
         {
             foundWord = FIND_LETTER.checkWordInText(capital, letterOrWord);
@@ -157,7 +159,6 @@ public class PLAY_GAME
             {
                 clearScreen();
             }
-            guessingCount += 1;
         }
 
         return false;
@@ -264,7 +265,7 @@ public class PLAY_GAME
     public static void gameWinScreen(long timeEnd, int guessingCount)
     {
         System.out.println("Congratulations! You Win! Your time is " + timeEnd 
-                            + " second and you guessed after " + guessingCount + " letters" );
+                            + " second and you guessed after " + guessingCount + " attempts" );
     }
 
     public static void gameLoseScreen()
