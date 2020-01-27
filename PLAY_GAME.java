@@ -120,7 +120,7 @@ public class PLAY_GAME
             foundLetter = true;
             if (!foundWord)
             {
-                lifeCount -= 1;
+                lifeCount -= 2;
                 indexOfDraw++;
             }
             else
