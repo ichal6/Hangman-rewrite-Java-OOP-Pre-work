@@ -37,9 +37,9 @@ public class PlayGame
         
         Scanner dataFromFile = FileOperation.openFile("countries_and_capitals.txt");
         listCountrysAndCapitals = FileOperation.ScannertoArray(dataFromFile, false);
-        countryAndCapital = PREPARE_TO_GAME.randomCapitalsAndCountry(listCountrysAndCapitals);
+        countryAndCapital = PrepareToGame.randomCapitalsAndCountry(listCountrysAndCapitals);
         capital = countryAndCapital.get(INDEX_OF_CAPITAL);
-        char[] capitalDash = PREPARE_TO_GAME.makeDashWord(capital);
+        char[] capitalDash = PrepareToGame.makeDashWord(capital);
 
         Scanner dataFromListWin = FileOperation.openFile("win_list.txt");
         listWin = FileOperation.ScannertoArray(dataFromListWin, true);

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public class PREPARE_TO_GAME 
+public class PrepareToGame 
 {
     public static void main(String[] args) 
     {
