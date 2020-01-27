@@ -20,11 +20,11 @@ public class Main
             switch(chooseUser)
             {
                 case 'S':
-                    PLAY_GAME.initGame();
+                    PlayGame.initGame();
                     break;
                 case 'H':
-                    Scanner dataFromListWin = FILE_OPERATION.openFile("win_list.txt");  
-                    System.out.print(FILE_OPERATION.arrayToString(FILE_OPERATION.ScannertoArray(dataFromListWin, true)));
+                    Scanner dataFromListWin = FileOperation.openFile("win_list.txt");  
+                    System.out.print(FileOperation.arrayToString(FileOperation.ScannertoArray(dataFromListWin, true)));
                     break;
                 case 'E':
                     isRun = false;
