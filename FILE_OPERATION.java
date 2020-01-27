@@ -44,36 +44,36 @@ public class FILE_OPERATION
         }
     }
 
-    public static ArrayList<ArrayList<String>> ScannertoArray(Scanner data_from_file, boolean listWin)
+    public static ArrayList<ArrayList<String>> ScannertoArray(Scanner dataFromFile, boolean listWin)
     {
-        ArrayList<ArrayList<String>> Array_countries_and_capitals = new ArrayList<ArrayList<String>>();
-        String new_row = "";
+        ArrayList<ArrayList<String>> arrayCountriesAndCapitals = new ArrayList<ArrayList<String>>();
+        String newRow = "";
         String country, capitals;
-        while(data_from_file.hasNextLine()) 
+        while(dataFromFile.hasNextLine()) 
         {
-            ArrayList<String> Array_row = new ArrayList<String>();
-            new_row = data_from_file.nextLine();
-            new_row = new_row.toUpperCase();
-            String[] parts = new_row.split("\\|");
+            ArrayList<String> ArrayRow = new ArrayList<String>();
+            newRow = dataFromFile.nextLine();
+            newRow = newRow.toUpperCase();
+            String[] parts = newRow.split("\\|");
             if(listWin)
             {
-                Array_row.add(parts[0].substring(0, parts[0].length() - 1)); //remove last char
-                Array_row.add(parts[1].substring(1, parts[1].length() - 1)); //remove first and last char
-                Array_row.add(parts[2].substring(1, parts[2].length() - 1)); //remove first and last char
-                Array_row.add(parts[3].substring(1, parts[3].length() - 1)); //remove first and last char
-                Array_row.add(parts[4].substring(1, parts[4].length())); //remove first char
+                ArrayRow.add(parts[0].substring(0, parts[0].length() - 1)); //remove last char
+                ArrayRow.add(parts[1].substring(1, parts[1].length() - 1)); //remove first and last char
+                ArrayRow.add(parts[2].substring(1, parts[2].length() - 1)); //remove first and last char
+                ArrayRow.add(parts[3].substring(1, parts[3].length() - 1)); //remove first and last char
+                ArrayRow.add(parts[4].substring(1, parts[4].length())); //remove first char
             }
             else
             {
                 country = parts[0].substring(0, parts[0].length() - 1); //remove last char
                 capitals = parts[1].substring(1, parts[1].length()); //remove first char
-                Array_row.add(country);
-                Array_row.add(capitals);
+                ArrayRow.add(country);
+                ArrayRow.add(capitals);
             }
-            Array_countries_and_capitals.add(Array_row);
+            arrayCountriesAndCapitals.add(ArrayRow);
            
         }
-        return Array_countries_and_capitals;
+        return arrayCountriesAndCapitals;
     }
 
     public static String arrayToString(ArrayList<ArrayList<String>> listWin)
