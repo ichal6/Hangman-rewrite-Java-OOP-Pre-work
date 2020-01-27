@@ -122,6 +122,7 @@ public class PLAY_GAME
             {
                 lifeCount -= 2;
                 indexOfDraw++;
+                notInWord.add(letterOrWord);
             }
             else
             {
